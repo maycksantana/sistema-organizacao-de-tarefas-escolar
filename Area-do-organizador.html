@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizador - Criar Evento</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Painel do Organizador</h1>
+    <h2>Criar Novo Evento</h2>
+
+    <form id="formEvento">
+        <label>Nome da Disciplina:</label><br>
+        <input type="text" id="disciplina" required><br>
+
+        <label>Nome do Professor:</label><br>
+        <input type="text" id="professor" required><br>
+
+        <label>Seu ID de Usuário:</label><br>
+        <input type="text" id="idUsuario" required><br>
+
+        <label>Senha do Evento:</label><br>
+        <input type="password" id="senhaEvento" required><br>
+
+        <label>Data e Hora:</label><br>
+        <input type="datetime-local" id="dataHora" required><br>
+
+        <label>Descrição:</label><br>
+        <textarea id="descricao" required></textarea><br>
+
+        <label>Localização:</label><br>
+        <input type="text" id="localizacao" required><br>
+
+        <label>Código do Evento (ID Único):</label><br>
+        <input type="text" id="codigoEvento" placeholder="Ex: MAT101" required><br>
+
+        <button type="button" onclick="salvarEvento()">Criar Evento</button>
+    </form>
+
+    <hr>
+    <h3>Eventos Criados</h3>
+    <div id="listaEventos">
+        </div>
+<hr>
+<h2>Atividades Entregues pelos Alunos</h2>
+<div id="listaEntregas">
+    </div>
+    
+    <script src="Area-do-organizador.js"></script>
+</body>
+</html>

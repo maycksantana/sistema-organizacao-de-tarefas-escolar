@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Participante</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel do Participante</h1>
+        <p>Localize seu evento e envie suas atividades.</p>
+    </header>
+
+    <main>
+        <section id="busca-evento">
+            <h3>Buscar Evento</h3>
+            <input type="text" id="codigoBusca" placeholder="Digite o Código do Evento">
+            <button onclick="buscarEvento()">Buscar</button>
+        </section>
+
+        <hr>
+
+        <section id="detalhesEvento" style="display:none;">
+            <h2 id="nomeEventoEncontrado"></h2>
+            <p><strong>Professor:</strong> <span id="profEvento"></span></p>
+            <p><strong>Descrição:</strong> <span id="descEvento"></span></p>
+
+            <h3>Enviar Atividade</h3>
+            <form id="formEnvio">
+                <label>Seu Nome Completo:</label><br>
+                <input type="text" id="nomeParticipante" required><br><br>
+
+                <label>Anexar Documento/Imagem:</label><br>
+                <input type="file" id="arquivoAtividade" required><br><br>
+
+                <button type="button" onclick="enviarDadosParticipante()">Enviar Atividade</button>
+            </form>
+        </section>
+
+        <div id="mensagemErro" style="color: red;"></div>
+    </main>
+
+    <script src="Area-do-participante.js"></script>
+</body>
+</html>
